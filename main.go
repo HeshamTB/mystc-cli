@@ -57,7 +57,6 @@ func main() {
     }
 
     fmt.Println("OTP Sent!")
-    fmt.Printf("loginOTP: %v\n", loginOTP)
     fmt.Print("Enter OTP: ")
     otp, err := reader.ReadString('\n')
     otp = strings.Trim(otp, "\n")
@@ -69,7 +68,15 @@ func main() {
     }
 
     fmt.Println("Logged in!")
-    fmt.Printf("login: %v\n", login)
+    balance, err := endpoints.GetBalance(login, selectedNumber.Number)
+    if err != nil {
+        fmt.Println(err.Error())
+        os.Exit(1)
+    }
+
+    fmt.Printf("Balance %f\n", balance.Balance)
+    
+    
 
 
 }
