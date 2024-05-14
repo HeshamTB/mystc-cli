@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"mystcapi/internal/constants"
-	"mystcapi/internal/urls"
-	"mystcapi/pkg/models"
+	"gitea.hbanafa.com/hesham/mystc-api/internal/constants"
+	"gitea.hbanafa.com/hesham/mystc-api/internal/urls"
+	"gitea.hbanafa.com/hesham/mystc-api/pkg/models"
 	"net/http"
 )
 

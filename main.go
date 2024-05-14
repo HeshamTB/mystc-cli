@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"mystcapi/pkg/endpoints"
-	"mystcapi/pkg/models"
+	"gitea.hbanafa.com/hesham/mystc-api/pkg/endpoints"
+	"gitea.hbanafa.com/hesham/mystc-api/pkg/models"
 	"os"
 	"strings"
 )
@@ -33,6 +33,7 @@ func main() {
         for idx, n := range phones.PhoneNumbers {
             fmt.Printf("%d: %s %s\n", idx, n.Number, n.Type.String())
         }
+        fmt.Printf("Select a number: ")
         input, err := reader.ReadString('\n')
         if err != nil {
             fmt.Println(err.Error())

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"mystcapi/internal/urls"
-	"mystcapi/pkg/models"
+	"gitea.hbanafa.com/hesham/mystc-api/internal/urls"
+	"gitea.hbanafa.com/hesham/mystc-api/pkg/models"
 	"net/http"
 )
 
