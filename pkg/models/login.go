@@ -57,3 +57,27 @@ type LoginVerificationResponse struct {
     RefreshToken string `json:"refreshToken"`
 }
 
+type Login struct {
+    LoginVerificationResponse     
+}
+
+func (l *Login) Set(login LoginVerificationResponse) {
+    l.AccessToken = login.AccessToken
+    l.TokenType = login.TokenType
+    l.ExpiresIn = login.ExpiresIn
+    l.RefreshToken = login.RefreshToken
+}
+
+func (l *Login) Load(filename string) {}
+func (l *Login) Save(filename string) error { return nil }
+func (l *Login) Valid() error { return nil }
+func (l *Login) fetchNewAccessToken() error { return nil }
+
+
+// Save to file
+// Try to get previous login
+// Ask for new login creds if not
+// Test previos login
+// Ask for new if not valid
+
+
